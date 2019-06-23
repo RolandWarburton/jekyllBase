@@ -1,0 +1,31 @@
+ul {
+    li {
+        font-size: $font_mobile;
+        
+        @include desktop {
+            font-size: $font_desktop
+        }
+    }
+}
+
+a {
+    font: 700 "Helvetica Neue", sans-serif;
+    margin-left: 20px;
+    color: $main-color;
+    text-decoration: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(
+          to right,
+          $secondary-color,
+          $secondary-color 50%,
+          $main-color 50%);
+          background-size: 200% 100%;
+          background-position: 100%;
+  }
+  
+  a:hover {
+    transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
+    background-position: 0%;
+  }
+  
