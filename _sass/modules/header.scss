@@ -5,19 +5,26 @@ $accent:#FFCD00;
 #header_container {
     background-color: $accent;
     display: grid;
+    
     position: fixed;
-    width: 100vw;
+    width: calc(100vw - (100vw - 100%));
     height: 10vh;
     transition: height .5s;
     -webkit-transition: height .5s;
-    grid-template-rows: 1;
-    grid-template-columns: auto auto;
+    grid-template-columns: 20% auto;
+    grid-template-rows: auto;
+    // justify-items: left;
+    align-items: right;
 
     #logo_container {
         height: 100%;
-        float: left;
+        display: grid;
+        align-items: center;
+        
         img {
-            height: 100%;
+            height: 80%;
+            width: auto;
+            margin: 10px;
         }
         img:last-child {
             display: none;
@@ -25,26 +32,26 @@ $accent:#FFCD00;
     }
 
     #box1 {
-        // background-color: blue;
-        grid-row: 1; 
-        grid-column: 1;
-        width: auto;
+        height: 100%;
     }
 
     #box2 {
-        // background-color: red;
-        grid-row: 1; 
-        grid-column: 2;
-        width: auto;
-        min-width: 50vw;
+        float: right;
+        
+        ul {
+            float: right;
+        }
     }
+
+    
     @include desktop {
-        grid-template-columns: auto 1fr;
-        grid-template-rows: none;
+        grid-template-columns: 1fr auto;
         height: 15vh;
 
         #logo_container {
-            float: right;
+            img:first-child {
+                display: none;
+            }
             img:last-child {
                 display: inline;
             }
@@ -58,6 +65,7 @@ $accent:#FFCD00;
     text-align: center;
 }
 
+
 .scrolled-nav {
     height: 8vh !important;
     @include desktop {
@@ -65,19 +73,23 @@ $accent:#FFCD00;
     }
 }
 
-// lists
-ul {
-    list-style-type: none;
-   
-    height: 100%;
+ul, .nav_list {
     display: flex;
-    // flex-direction: row;
-    // justify-content: flex-start;
-
-
-
+    height: 100%;
+    align-items: center;
+    
     li {
-        display: inline;
-        margin: auto 10;
+        margin: 0 20px;
+        width: 100%;
     }
+}
+
+.nav_dropdown{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: left;
+    margin: 3px 0px;
+    height: auto;
+    background: $accent;
 }

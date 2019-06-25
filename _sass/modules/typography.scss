@@ -1,16 +1,25 @@
-ul {
-    li {
-        font-size: $font_mobile;
-        
-        @include desktop {
-            font-size: $font_desktop
-        }
+* {
+    line-height:1.125em;
+    font-size: 2vh;
+    @include desktop {
+        font-size: 2vw;
+    }
+    @include mobile_landscape {
+        font-size: 2.5vw;
     }
 }
 
+h1 {
+    font-size: 200%;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
 a {
-    font: 700 "Helvetica Neue", sans-serif;
-    margin-left: 20px;
+    font: "Helvetica Neue", sans-serif;
     color: $main-color;
     text-decoration: none;
     -webkit-background-clip: text;

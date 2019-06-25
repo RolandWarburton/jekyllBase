@@ -1,14 +1,11 @@
 window.onload = function() {
     console.log("ready");
 
-    // scrollTop = Document.scrollTop;
-    // document.body.onscroll = function(){};
-    // console.log(test);
 
     window.addEventListener("scroll", function(){
         getPageScroll();
     }, false)
-  };
+
 
 //   returns percentage of page scroll
 function getPageScroll() {
@@ -22,4 +19,11 @@ function getPageScroll() {
         } 
         // console.log(scrollTop);
 }
-  
+
+
+
+$('.nav_list .dropdown_trigger').click(function(e) {
+  $(this).siblings('.nav_dropdown').slideToggle()
+});
+
+};

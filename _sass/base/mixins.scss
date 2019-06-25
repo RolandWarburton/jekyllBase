@@ -21,3 +21,9 @@
       @content;
     }
   }
+
+  @mixin mobile_landscape {
+    @media (orientation: landscape) and (max-width : #{$desktop-width}) {
+      @content;
+    }
+  }
