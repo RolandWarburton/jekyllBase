@@ -1,33 +1,39 @@
-<div id="header_container">
 
+<div class="navigation" id="header_top">
+        <span id="header_top_nav">0428780524</span>
+</div>
 
-    <div id="box1">
+<div class="navigation" id="header_middle">
+
         <div id="logo_container">
-                <img src="assets/media/logo_small.PNG" alt="Italian Trulli">
-                <img src="assets/media/logo_big.PNG" alt="Italian Trulli">
+                <div id="nav_img_small"><img src="assets/media/logo_small.PNG" alt="logo"></div>
+                <div id="nav_img_big"><img src="assets/media/logo_big.PNG" alt="logo"></div>   
         </div>
-    </div>
 
-    <div id="box2">
-        <ul class ="nav_list">
-                <li>
-                    <a class="dropdown_trigger" href="#!">Honey</a>
-                    <ul class="nav_dropdown">
-                        <li class="dropdown_element"><a href="#!">Buy</a></li>
-                        <li class="dropdown_element"><a href="#!">Recipes</a></li>
-                        <li class="dropdown_element"><a href="#!">Health</a></li>
-                    </ul>
-                </li>
-              
-                        
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+        <div id="mobile_nav">
+                <a href="#one">ONE</a>
+                <a href="#two">TWO</a>
+                <a href="#three">THREE</a>
+        </div>
+        <div id="hamburger_container">
+                <a class="hamburger">
+                        <div class="line top"></div>
+                        <div class="line middle"></div>
+                        <div class="line bottom"></div>
+                </a>
+        </div>
+        <ul class="nav_list">
+        <li><a href="#!">Buy</a></li>
+        <li><a href="#!">Recipes</a></li>
+        <li><a href="#!">Health</a></li>
+        <li><a href="#!">About</a></li>
+        <li><a href="#!">Contact</a></li>
         </ul>
-        <!-- test -->
-    </div>
-    
 </div>
 
-<div class="hero_container">
-    <h1>{{ page.title }}</h1>
+
+    
+<div class="navigation" id="header_bottom">
+        <h1>{{ page.title }}</h1>
 </div>
+

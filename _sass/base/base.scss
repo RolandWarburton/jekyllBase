@@ -1,7 +1,7 @@
+$main_color:rgb(52, 62, 87);
 body {
-      background-color: whitesmoke;
-      padding: 0px;
-      margin: 0px;
+      background-color: $main_color;
+      color: white;
 }
 
 * {
