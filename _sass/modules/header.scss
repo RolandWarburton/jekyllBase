@@ -24,7 +24,7 @@ $accent:#FFCD00;
     top: 0;
     padding: 10px 10%;
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr auto;
 
 
     #logo_container {
@@ -43,72 +43,39 @@ $accent:#FFCD00;
             #nav_img_big {display: block;}
         }
     }
+
+    .nav_list {
+        grid-row: 1;
+        grid-column: 2;
+        margin: auto;
+        li {
+            margin: 0 10px;
+            display: inline;
+        }
+    
+        @include desktop {
+            grid-row: 1;
+            grid-column: 2;
+            display: block;
+            margin: auto 0;
+            text-align: right;
+    
+    
+        }
+    }
     
 }
 
 #header_bottom {
     grid-template-columns: 1fr;
-    text-align: center;
+    h1 {
+        margin: auto;
+        text-align: center;
+    }
     padding: 30px;
     color: black;
     background: darken( $accent, 4% )
 }
 
-.nav_list {
-    display: none;
-
-    @include desktop {
-        display: block;
-        margin: auto 0;
-        text-align: right;
-
-        li {
-            margin: 0 10px;
-            display: inline;
-        }
-    }
-}
 
 
-// mobile nav
-#hamburger_container {
-    background: #ff0000;
-    margin: auto 60%;
-    z-index: 2;
-}
-
-.hamburger {
-    display:flex;
-    flex-wrap:wrap;
-    height: 30px;
-    width: 30px;
-    
-    &:hover {cursor:pointer;}
-    .line {
-        background:#000;
-        width:100%;
-        height: 6px;
-    }
-    @include desktop {
-        display: none;
-    }
-  }
-
-  
-  #mobile_nav {
-    background:grey;
-    width:100vw;
-    height:100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
- 
-    position: fixed;
-    left: 0;
-    top: 0;
-    overflow: hidden;
-    a {
-        margin: 10px auto;
-    }
-  }
-  

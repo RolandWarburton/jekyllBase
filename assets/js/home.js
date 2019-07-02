@@ -12,16 +12,19 @@ window.onload = function() {
   
   $hamburger.on('click', function(e) {
     hamburgerMotion.reversed(!hamburgerMotion.reversed());
+
   });
 
 
 
 
 
-  // for dropdown nav
-  $('.nav_list .dropdown_trigger').hover(function(e) {
-    $(this).siblings('.nav_dropdown').slideToggle()
-  });
+  // // for dropdown nav
+  // $('.nav_list .dropdown_trigger').hover(function(e) {
+  //   $(this).siblings('.nav_dropdown').slideToggle()
+  // });
 
 
 };
+
+
