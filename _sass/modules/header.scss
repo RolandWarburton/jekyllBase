@@ -34,7 +34,7 @@ $accent:#FFCD00;
         #nav_img_small {display: block;}
         #nav_img_big {display: none;}
 
-        img {
+        .nav_image {
             height: 2em;
         }
         
@@ -47,20 +47,12 @@ $accent:#FFCD00;
     .nav_list {
         grid-row: 1;
         grid-column: 2;
-        margin: auto;
+        text-align: right;
+        margin: auto 0;
         li {
-            margin: 0 10px;
+            justify-content: flex-end;
+            margin: 0 1%;
             display: inline;
-        }
-    
-        @include desktop {
-            grid-row: 1;
-            grid-column: 2;
-            display: block;
-            margin: auto 0;
-            text-align: right;
-    
-    
         }
     }
     
