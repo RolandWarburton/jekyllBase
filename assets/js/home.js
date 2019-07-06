@@ -1,17 +1,28 @@
 window.onload=function(){
 
-  const c = document.querySelectorAll(".img_container > img");
-  console.log(c[0]);
+  // scrollmagic
+  var controller = new ScrollMagic.Controller();
+  
+  $(".img_wrapper").each(function() {
+    // build a tween
+    var tween = TweenMax.to($(this), 1, {width: "100%"});
 
-  document.getElementById("test").addEventListener('click', function() {
-    TweenMax.to(c[0], 1, {height: '100%', background: 'blue'});
- });
- 
- // $('.test').on('click',  function(){
- //   tl.play();
- // });
- 
- // $('.reset').on('click',  function(){
- //   tl.pause(0, true);
- // })
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+      triggerElement: this,
+      reverse:false
+    })
+    .setTween(tween) // trigger a TweenMax.to tween
+    .addTo(controller);
+
+  });
+
+
+
+
+  // document.getElementById("test").addEventListener('click', function() {
+  //   TweenMax.to(x[0][0], 1, {width: "100%"});
+  // });
+
+
 }

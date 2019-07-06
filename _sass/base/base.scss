@@ -1,7 +1,7 @@
 $main_color:rgb(52, 62, 87);
 body {
       background-color: $main_color;
-      color: white;
+      color: $main_color;
       
 }
 
@@ -9,15 +9,29 @@ body {
       // transition: all .5s;
       margin: 0px;
       padding: 0px;
+      // box-sizing: border-box;
 }
 
 .img_container {
-      img {
-            height: 0%;
-            width: 600px;
-            transform-origin: bottom;
+      height: 300;
+
+      .img_wrapper {
+            // W & H determines whice side the img animates from
+            width: 0%;
+            height: 100%;
+            overflow: hidden;
+            display: grid;
+      
+            img {
+                  overflow: hidden;
+                  margin: auto;
+                  padding: 10px;
+                  background: wheat;
+            }
+      
       }
-      width: 600px;
-      height:200px;
-      padding: 10px;
+}
+
+.container {
+      padding: 10%;
 }
