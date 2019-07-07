@@ -1,33 +1,74 @@
 #products_wrapper {
-    display: inline-grid;
-    grid-template-rows: auto;
-    justify-content: space-around;
-    grid-gap: 2rem;
-    width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+      display: grid;
+      grid-template-rows: auto;
+      justify-content: space-around;
+      grid-gap: 2rem;
+      width: 100%;
+	grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+	transform: none;
 }
 
 .product {
-    font-size: 2em;
-    font-weight: bold;
-    position: relative;
-    text-align: center;
-    text-transform: uppercase;
-    
-    img {
-        // width: 100%;
-        border-radius: 25px 25px 0 0;
-    }
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      color: $main_color;
+	
 
-    .product_title {
-        border-radius: 0 0 10px 10px;
-    }
-    .product_title, .product_buy {
-        display: grid;
-        height: 100%;
-        width: 100%;
-        position: relative;
-        background: darken($accent, 10);
-    }
+      img {
+            border-radius: 25px 25px 0 0;
+      }
 
+      .product_title {
+            display: grid;
+            border-radius: 0 0 10px 10px;
+            background: darken($accent, 10);
+      }
+
+      .product_detail_wrapper {
+            width: 0;
+            height: 100vh;
+		background: darken($main_color, 8);
+		// opacity: 0.8;
+		position: fixed;
+            bottom: 0;
+            left: 0;
+		z-index: 2;
+		overflow: hidden;
+		.product_detail_enquire_button {
+			background: lighten($main_color, 2);
+			color: lighten($main_color, 50);;
+			padding: 20px;
+		}
+		.product_detail_close {
+			position: absolute;
+			top: 200px;
+			left: 10px;
+			text-align: center;
+			z-index: 3;
+			// background: red;
+			@include desktop {
+				top: 0px;
+				left: 0px;
+			}
+			&:hover {
+				color: white;
+			}
+		}
+		h2 {
+			color: lighten($main_color, 70);
+			margin-top: 200px;
+			@include desktop {
+				margin-top: 50px;
+			}
+		}
+		h2, p, a {
+			padding: 50px;
+			opacity: 0;
+		}
+		p {
+			font-size: 50%;
+		}
+      }
 }

@@ -7,7 +7,7 @@ $accent:#FFCD00;
 
 .navigation {
     background-color: $accent;
-    z-index: 2;
+    z-index: 1;
 }
 
 #header_top {
@@ -17,7 +17,9 @@ $accent:#FFCD00;
     // font-size: 200%;
     color: white;
     padding: 10px 10%;
-    
+    a {
+	color: lighten($main_color, 10);
+    }
 }
 
 #header_middle {
