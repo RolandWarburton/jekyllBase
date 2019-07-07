@@ -87,3 +87,12 @@ var playfunction = function(played, element) {
 		return true;
 	}
 }
+
+var sendmail = function()
+{
+    var body = "First name: " + document.getElementById("fn").value + "\n";
+    body +=  "Last name: " + document.getElementById("ln").value;
+    var email = document.getElementById("email").value;
+    var location = "mailto:" + email + "?subject=Hello world&body=" + encodeURIComponent(body);
+    window.location.href = location;
+}
