@@ -1,17 +1,11 @@
 * {
     line-height:1.125em;
-    font-size: 2vh;
-    @include desktop {
-        font-size: 2vw;
-    }
-    @include mobile_landscape {
-        font-size: 2.5vw;
-    }
+    font-size: calc(0.5rem + 2.5vmin);
 }
 
-h1 {
-    font-size: 200%;
-}
+// h1 {
+//     font-size: 200%;
+// }
 
 
 ul {
@@ -19,7 +13,7 @@ ul {
 }
 
 a {
-    font: "Helvetica Neue", sans-serif;
+    // font: "Helvetica Neue", sans-serif;
     color: $main-color;
     text-decoration: none;
     -webkit-background-clip: text;
@@ -38,3 +32,7 @@ a {
     background-position: 0%;
   }
   
+
+  p {
+      color: white;
+  }

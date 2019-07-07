@@ -2,7 +2,10 @@ $main_color:rgb(52, 62, 87);
 body {
       background-color: $main_color;
       color: $main_color;
-      
+}
+
+html {
+      visibility:hidden; 
 }
 
 * {
