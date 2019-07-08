@@ -57,7 +57,10 @@ $accent:#FFCD00;
         li {
             justify-content: flex-end;
             margin: 0 1%;
-            display: inline;
+		display: inline;
+		a {
+			color: $main-color;
+		}
         }
     }
     
@@ -70,7 +73,6 @@ $accent:#FFCD00;
         text-align: center;
     }
     padding: 30px;
-    color: black;
     background: darken( $accent, 4% )
 }
 

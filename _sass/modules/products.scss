@@ -21,7 +21,8 @@
       }
 
       .product_title {
-            display: grid;
+		display: grid;
+		color: $main_color;
             border-radius: 0 0 10px 10px;
             background: darken($accent, 10);
       }

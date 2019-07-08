@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900');
+
 * {
     line-height:1.125em;
     font-size: calc(0.5rem + 2.5vmin);
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 // h1 {
@@ -13,7 +16,7 @@ ul {
 }
 
 a {
-    color: $main-color;
+    color: white;
     text-decoration: none;
    
   }
@@ -22,8 +25,16 @@ a {
     transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
     background-position: 0%;
   }
+
+  h1 {
+	color: $main-color;
+  }
   
 
-  p {
+  p,h2,h3,h4,h5 {
       color: white;
+  }
+
+  .yellow_text {
+	  color: $accent;
   }
