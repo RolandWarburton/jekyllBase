@@ -12,11 +12,12 @@ window.onload = function () {
 
 	$(".img_wrapper").each(function () {
 		// build a tween
-		var tween = TweenMax.to($(this), 1, { width: "100%" });
+		var tween = TweenMax.to($(this), 0.7, { width: "100%" });
 
 		// build a scene
 		var scene = new ScrollMagic.Scene({
 			triggerElement: this,
+			triggerHook: 0.9,
 			reverse: false
 		})
 			.setTween(tween) // trigger a TweenMax.to tween
@@ -59,16 +60,28 @@ window.onload = function () {
 
 	// });
 
-	
+	// init flickity
+	var elem = document.querySelector('.main-carousel');
+	var flkty = new Flickity( elem, {
+	  // options
+	  cellAlign: 'center',
+	  contain: true
+	});
+
+	// send mail
+	$('#contact_form_submit').click(function () {
+		sendmail();
+	});
+
 	// set slider to closed
 	let played = false
 	// if the slider is clicked on. open the slider
-	$('.product').click(function() {
+	$('.product').click(function () {
 		played = playfunction(played, $(this))
 	})
 }
 
-var playfunction = function(played, element) {
+var playfunction = function (played, element) {
 	// get the device width
 	const width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 	// determine the size of the side panel
@@ -76,23 +89,23 @@ var playfunction = function(played, element) {
 	if (played) {
 		// close the slider
 		let temp = new TimelineMax()
-		.to(element.find('.product_detail_wrapper >'), 0.5, { autoAlpha: 0  })
-		.to(element.find('.product_detail_wrapper'), 0.5, { width:'0'});
+			.to(element.find('.product_detail_wrapper >'), 0.5, { autoAlpha: 0 })
+			.to(element.find('.product_detail_wrapper'), 0.5, { width: '0' });
 		return false;
 	} else {
 		// open the slider
 		let temp = new TimelineMax()
-		.to(element.find('.product_detail_wrapper'), 0.5, { width:panelSize })
-		.to(element.find('.product_detail_wrapper >'), 0.5, { autoAlpha: 1});
+			.to(element.find('.product_detail_wrapper'), 0.5, { width: panelSize })
+			.to(element.find('.product_detail_wrapper >'), 0.5, { autoAlpha: 1 });
 		return true;
 	}
 }
 
-var sendmail = function()
-{
-    var body = "First name: " + document.getElementById("fn").value + "\n";
-    body +=  "Last name: " + document.getElementById("ln").value;
-    var email = document.getElementById("email").value;
-    var location = "mailto:" + email + "?subject=Hello world&body=" + encodeURIComponent(body);
-    window.location.href = location;
+var sendmail = function () {
+	let ps = document.getElementById("contact_product_selection");
+	let body = "Hi Steven,\ni would like to enquire about the following product: " + ps.options[ps.selectedIndex].text; + "\n";
+	body += '\n\nMessage:' + document.getElementById("contact_form_message").value;
+	//     var email = document.getElementById("email").value;
+	let location = "mailto:" + 'warburtonroland@gmail.com' + "?subject=Wild Dog Honey enquiry&body=" + encodeURIComponent(body);
+	window.location.href = location;
 }
