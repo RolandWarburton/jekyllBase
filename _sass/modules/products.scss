@@ -13,11 +13,17 @@
       font-weight: bold;
       text-align: center;
       text-transform: uppercase;
-      color: $main_color;
+	color: $main_color;
+	cursor: hand;
 	
 
       img {
-            border-radius: 25px 25px 0 0;
+		border-radius: 25px 25px 0 0;
+		filter: grayscale(50%);
+		transition: filter 0.2s;
+		&:hover {
+			filter: grayscale(0%);
+		}
       }
 
       .product_title {

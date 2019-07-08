@@ -15,6 +15,7 @@ html {
       // box-sizing: border-box;
 }
 
+// for sliding images
 .img_container {
       height: 300;
 
@@ -76,3 +77,12 @@ html {
 	transform: none;
 	// background: red;
     }
+
+    .two_col {
+	display: grid;
+      grid-template-rows: auto;
+      justify-content: space-around;
+      grid-gap: 2rem;
+	grid-template-columns: 1fr 1fr;
+    }
+
