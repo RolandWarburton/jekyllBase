@@ -1,3 +1,3 @@
 jekyll base
-![Alt Text](https://i.imgur.com/6RkgrRC.gif)
-![Alt Text](https://i.imgur.com/dIlVri5.gif)
+![img1](https://i.imgur.com/6RkgrRC.gif)
+![img2](https://i.imgur.com/dIlVri5.gif)
